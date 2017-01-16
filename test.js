@@ -5,7 +5,7 @@ import test from 'ava'
 import listen from 'test-listen'
 import jwt from 'jsonwebtoken'
 
-import microAuth from './index'
+import microAuth from './api'
 import micro from 'micro'
 import request from 'request-promise'
 
