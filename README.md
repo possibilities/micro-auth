@@ -20,6 +20,6 @@ The app is configured via environment variables (see usage above). Possible valu
 
 The key used to encode [JWTs](https://jwt.io) returned from the service
 
-#### `AUTHENTICATION_API_PORT` | optional, default 3000
+#### `API_PORT` | optional, default 3000
 
 The api app will bind to this port
