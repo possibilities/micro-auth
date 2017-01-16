@@ -9,9 +9,7 @@ const {
   addUser
 } = queries
 
-const authenticationSecretKey = process.env.AUTHENTICATION_SECRET_KEY
-
-if (!authenticationSecretKey) {
+if (!process.env.AUTHENTICATION_SECRET_KEY) {
   console.error('AUTHENTICATION_SECRET_KEY environment variable is required')
   process.exit(1)
 }
@@ -20,7 +18,7 @@ const database = memoryBackend()
 
 const createToken = async user => {
   const userView = omit(user, 'password')
-  return jwt.sign(userView, authenticationSecretKey)
+  return jwt.sign(userView, process.env.AUTHENTICATION_SECRET_KEY)
 }
 
 const isPasswordStrong = password => password.length >= 6 // TODO
