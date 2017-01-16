@@ -24,7 +24,7 @@
     "lodash.find": "^4.6.0",
     "lodash.omit": "^4.5.0",
     "micro": "^6.1.0",
-    "micro-api": "^0.0.10",
+    "micro-api": "^0.0.11",
     "micro-cors": "^0.0.1",
     "uuid": "^3.0.1"
   },
