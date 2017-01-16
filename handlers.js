@@ -27,6 +27,7 @@ const isUsernameValid = username => /^[A-Za-z0-9]+$/.test(username)
 const userExists = async username =>
   !!(await findUserForUsername(database, username))
 
+// POST /sign-up
 const signUp = async ({ body: user }) => {
   if (!user.username) throw new Error('username is required')
   if (!isUsernameValid(user.username)) throw new Error('username is not valid')
@@ -44,6 +45,7 @@ const signUp = async ({ body: user }) => {
   return Object.assign({}, newUser, { token })
 }
 
+// POST /sign-in
 const signIn = async ({ body: credentials }) => {
   if (!credentials.username) throw new Error('username is required')
   if (!credentials.password) throw new Error('password is required')
@@ -57,6 +59,7 @@ const signIn = async ({ body: credentials }) => {
   throw new Error(`error signing in '${credentials.username}'`)
 }
 
+// GET /check-username
 const checkUsername = async ({ params: { username } }) => {
   const user = await findUserForUsername(database, username)
   if (user) {
