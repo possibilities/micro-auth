@@ -1,7 +1,7 @@
 const omit = require('lodash.omit')
 const jwt = require('jsonwebtoken')
 const queries = require('./queries')
-const memoryBackend = require('./memoryBackend')
+const memoryBackend = require('./backends/memory')
 
 const {
   findUserForUsername,

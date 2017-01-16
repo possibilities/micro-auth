@@ -1,7 +1,7 @@
 const find = require('lodash.find')
 const uuid = require('uuid')
 
-const memoryBackend = () => {
+const memory = () => {
   const _inMemoryBackend = {}
 
   return {
@@ -35,4 +35,4 @@ const memoryBackend = () => {
   }
 }
 
-module.exports = memoryBackend
+module.exports = memory
