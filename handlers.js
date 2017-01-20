@@ -62,9 +62,7 @@ const signIn = async ({ body: credentials }) => {
 // GET /check-username
 const checkUsername = async ({ params: { username } }) => {
   const user = await findUserForUsername(database, username)
-  if (user) {
-    return omit(user, 'password')
-  }
+  return user !== null;
 }
 
 module.exports = {
