@@ -26,7 +26,7 @@
     "lodash.omit": "^4.5.0",
     "micro": "^6.1.0",
     "micro-api": "^0.0.11",
-    "micro-cors": "^0.0.1",
+    "micro-cors": "^0.0.4",
     "uuid": "^3.0.1"
   },
   "devDependencies": {
